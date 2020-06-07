@@ -1,6 +1,4 @@
-export const CHECK_USER_BEGIN   = 'CHECK_USER_BEGIN';
-export const CHECK_USER_SUCCESS = 'CHECK_USER_SUCCESS';
-export const CHECK_USER_FAILURE = 'CHECK_USER_FAILURE';
+import Types from './types'
 
 export function checkUser(text) {
     return dispatch => {
@@ -24,15 +22,15 @@ export function checkUser(text) {
   }
 
   export const checkUserBegin = () => ({
-    type: CHECK_USER_BEGIN
+    type: Types.CHECK_USER_BEGIN
   });
   
   export const checkUserSuccess = products => ({
-    type: CHECK_USER_SUCCESS,
+    type: Types.CHECK_USER_SUCCESS,
     payload: { products }
   });
   
   export const checkUserFailure = error => ({
-    type: CHECK_USER_FAILURE,
+    type: Types.CHECK_USER_FAILURE,
     payload: { error }
   });

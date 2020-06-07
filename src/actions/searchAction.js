@@ -1,10 +1,4 @@
-export const FETCH_REPO_BEGIN   = 'FETCH_REPO_BEGIN';
-export const FETCH_REPO_SUCCESS = 'FETCH_REPO_SUCCESS';
-export const FETCH_REPO_FAILURE = 'FETCH_REPO_FAILURE';
-export const FETCH_ORG_BEGIN   = 'FETCH_ORG_BEGIN';
-export const FETCH_ORG_SUCCESS = 'FETCH_ORG_SUCCESS';
-export const FETCH_ORG_FAILURE = 'FETCH_ORG_FAILURE';
-export const TO_SEARCH = 'TO_SEARCH';
+import Types from './types';
 
 export const searchUsername = text => {
     return  {
@@ -50,30 +44,30 @@ function handleErrors(response) {
 }
 
 export const fetchRepoBegin = () => ({
-  type: FETCH_REPO_BEGIN
+  type: Types.FETCH_REPO_BEGIN
 });
 
 export const fetchRepoSuccess = products => ({
-  type: FETCH_REPO_SUCCESS,
+  type: Types.FETCH_REPO_SUCCESS,
   payload: { products }
 });
 
 export const fetchRepoFailure = error => ({
-  type: FETCH_REPO_FAILURE,
+  type: Types.FETCH_REPO_FAILURE,
   payload: { error }
 });
 
 
 export const fetchOrgBegin = () => ({
-  type: FETCH_ORG_BEGIN
+  type: Types.FETCH_ORG_BEGIN
 });
 
 export const fetchOrgSuccess = products => ({
-  type: FETCH_ORG_SUCCESS,
+  type: Types.FETCH_ORG_SUCCESS,
   payload: { products }
 });
 
 export const fetchOrgFailure = error => ({
-  type: FETCH_ORG_FAILURE,
+  type: Types.FETCH_ORG_FAILURE,
   payload: { error }
 });
